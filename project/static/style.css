@@ -1,0 +1,200 @@
+.bg{
+    background-color: rgb(214, 248, 248);
+    height:100%;
+}
+.body{
+    height:100%
+}
+.imgavs{
+    width:80px;
+    height:240px;
+}
+.avsprice{
+    color:rgb(255, 145, 0);
+    font-size:23px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.app-card{
+    border-radius: 8px;
+    box-shadow: 3px 4px 8px rgba(12, 2, 2, 0.1);
+    background-color: #fff;
+    padding:12px;
+    margin-right:50px;
+}
+.product-card {
+    padding: 25px;
+    margin: 0;
+    margin-bottom:4px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Black shadow */
+    border: 1px solid #f7f0f0; /* Light border */
+    width: 100%;
+}
+
+.card-title{
+    font-size:18px;
+}
+.card-price{
+    font-weight: bold;
+}
+.results-container{
+    padding-left: 0px;
+}
+.logo{
+    font-size:60px;
+    border-radius:10px;
+    font-family:fantasy;
+    color:rgb(255, 198, 238)
+}
+.sm-box:first-child {
+    margin-top: 0;
+}
+.pg-hom-apps {
+    grid-area: apps;
+    background: linear-gradient(to left, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.sm-box {
+    position: relative;
+    border: 1px solid gainsboro;
+    border-width: 1px 0;
+    background: white;
+    margin: var(--mv) 0;
+}
+.sm-cats.icon-s {
+    grid-gap: 16px 0;
+}
+@media (min-width: 750px) {
+    .sm-cats {
+        box-shadow: #333;
+        --per-row: 10;
+        grid-auto-columns: 1fr !important;
+    }
+}
+.sm-cats {
+    --per-row: 5;
+    display: grid;
+    grid-template-columns: repeat(var(--per-row), 1fr);
+    grid-gap: 8px 0;
+    width: 100%;
+    padding: 8px 4px;
+}
+.sm-img {
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 0;
+    object-fit: contain;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    margin-left: 12px;
+}
+.app-name{
+    color:black;
+    font-family: serif;
+    font-size: 23px;
+    margin-left: 15px;
+}
+.letshop{
+    background-image:linear-gradient(to right,orange,rgb(245, 200, 134));
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.d{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.items-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 14%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Ensure a white background for consistency */
+}
+
+.category-container img {
+    max-width: 100px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.category-container p {
+    margin: 0;
+}
+
+/* Specific low poly style backgrounds for each category container */
+.category-container.laptops {
+    background: linear-gradient(to right, #ADD8E6, #C8A2C8);
+}
+
+.category-container.mobiles {
+    background: linear-gradient(to right, #C8A2C8, #D8BFD8);
+}
+
+.category-container.watches {
+    background: linear-gradient(to right, #D8BFD8, #FFC0CB);
+}
+
+.category-container.cameras {
+    background: linear-gradient(to right, #FFC0CB, #FFB6C1);
+}
+
+.category-container.microphones {
+    background: linear-gradient(to right, #FFB6C1, #FFA07A);
+}
+.company-info {
+    
+    align-items: flex-start;
+}
+
+.company-logo {
+    margin-right: 20px;
+}
+
+.company-logo img {
+    max-width: 100px;
+    border-radius: 50%; /* Circular border */
+}
+
+
+.categories ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.categories ul li {
+    margin-bottom: 5px;
+}
+
+.social-icons img {
+    max-width: 30px;
+    margin: 0 5px;
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #fff; /* White border */
+}
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 3px solid #fff; /* White border on top */
+}
+.bottom{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product_name }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .product-card {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-details {
+            font-size: 18px;
+        }
+        .product-price {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .details-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .left-section {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .right-section {
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ml-4">
+        <!-- Home icon -->
+        <a class="navbar-brand" href="/">
+            <i class="bi bi-house-door-fill" style="font-size: 30px;color:black"></i>
+        </a>
+    </div>
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="product-card">
+                    <div class="details-section">
+                        <div class="left-section mr-4">
+                            <img src="{{ other_details[0]['image_url'] }}" alt="{{ product_name }}" class="product-image">
+                        </div>
+                        <div class="right-section">
+                            <h2>{{ product_name }}</h2>
+                            <div class="product-details">
+                                <p>Ratings: {{ other_details[0]['ratings'] }}</p>
+                            </div>
+                            <div class="product-prices">
+                                <p class="product-price">Price ({{ store1 }}): ${{ price1 }}</p>
+                                <p class="product-price">Price ({{ store2 }}): ${{ price2 }}</p>
+                            </div>
+                            <div class="text-center">
+                                <a href="{{ other_details[0]['product_url'] }}" class="btn btn-primary">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
