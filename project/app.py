@@ -1,3 +1,4 @@
+import os
 from difflib import SequenceMatcher
 from flask import Flask, render_template, request
 import csv
@@ -169,4 +170,4 @@ def similar_products(vendor_name, product_name):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
