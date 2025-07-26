@@ -12,7 +12,7 @@ app = Flask(__name__)
 def load_data():
     data = []
     # Add more CSV files here if needed
-    csv_files = ['flipkart.csv', 'amazon_products.csv','Reliance1.csv']
+    csv_files = ['Flipkart.csv', 'amazon_products.csv','Reliance1.csv']
     for file_name in csv_files:
         with open(f'csv_files/{file_name}', 'r', encoding='utf-8') as file:
             csv_reader = csv.DictReader(file)
@@ -52,7 +52,7 @@ def index():
 @app.route('/category/<category_name>')
 def category(category_name):
     products = []
-    csv_files = [ 'flipkart.csv','amazon_products.csv','Reliance1.csv']
+    csv_files = [ 'Flipkart.csv','amazon_products.csv','Reliance1.csv']
     for file_name in csv_files:
         with open(f'csv_files/{file_name}', 'r', encoding='utf-8') as file:
             csv_reader = csv.DictReader(file)
