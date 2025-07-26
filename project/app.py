@@ -14,7 +14,8 @@ def load_data():
     # Add more CSV files here if needed
     csv_files = ['Flipkart.csv', 'amazon_products.csv','Reliance1.csv']
     for file_name in csv_files:
-        with open(f'csv_files/{file_name}', 'r', encoding='utf-8') as file:
+        csv_path = os.path.join(os.path.dirname(__file__), 'csv_files', file_name)
+        with open(csv_path, 'r', encoding='utf-8') as file:
             csv_reader = csv.DictReader(file)
             for row in csv_reader:
                 data.append(row)
@@ -54,7 +55,8 @@ def category(category_name):
     products = []
     csv_files = [ 'Flipkart.csv','amazon_products.csv','Reliance1.csv']
     for file_name in csv_files:
-        with open(f'csv_files/{file_name}', 'r', encoding='utf-8') as file:
+        csv_path = os.path.join(os.path.dirname(__file__), 'csv_files', file_name)
+        with open(csv_path, 'r', encoding='utf-8') as file:
             csv_reader = csv.DictReader(file)
             data = [row for row in csv_reader if category_name.lower() in row['main_category'].lower()]
             products.extend(data[:30])  # Get 20 products from each CSV
